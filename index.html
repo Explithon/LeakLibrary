@@ -23,12 +23,28 @@
     </head>
     <body>
         <h1>LeakLibrary</h1>
-        <p>The Library of leaks, exploits, webcams, OSINT and more!</p>
+        <h2>🔓 Live-Leaks Worldwide:</h2>
+<p id="counter" style="font-size: 2em; color: red;">0</p>
+
+<script>
+  let leaked = 25000000000;
+  const perSecond = 35;
+
+  function updateCounter() {
+    leaked += perSecond;
+    document.getElementById("counter").innerText = leaked.toLocaleString();
+  }
+
+  updateCounter();
+  setInterval(updateCounter, 1000);
+</script>
+
+        <p>The archive of leaks, exploits, webcams & OSINT.<br>Track anyone. Anytime. Anywhere.</p>
 
         <nav>
             <a href="leaks.html">Leaks</a>
             <a href="tools.html">Tools and hacks</a>
-            <a href="Webcams.hmtl">Webcams</a>
+            <a href="Webcams.html">Webcams</a>
             <a href="osint.html">OSINT, track someone everytime. everywhere.</a>
             <a href="about.html">About</a>
         </nav>
